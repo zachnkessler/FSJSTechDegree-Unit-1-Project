@@ -1,16 +1,11 @@
 /******************************************
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
+Zachary Kessler
+11/11/2020
 ******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
-/*** 
- * `quotes` array 
-***/
-// These are five quotes to be used in the random quote generator
+// QUOTES ARRAY: These are five quotes to be used in the random quote generator.
 const quotes = [
   {
     quote: "Never tell me the odds!",
@@ -44,17 +39,24 @@ const quotes = [
   }
 ];
 // console.log(quotes); SUCCESSFUL TEST
-/***
- * `getRandomQuote` function
-***/
+
+/**
+ * Returns quote from above array using random number as index value.
+ * 
+ * Generates random number between 0 and 4.
+ */
 function getRandomQuote () {
   let randomNumber = Math.floor(Math.random() * quotes.length);
   return quotes[randomNumber];
 }
 // console.log(getRandomQuote()); SUCCESSFUL TEST
-/***
- * `printQuote` function
-***/
+
+/**
+ * Returns HTML string of property values from the quotes array.
+ * 
+ * Builds HTML string using object property values from the getRandomQuotes function.
+ * Places built HTML string within HTML element with ID of #quote-box.
+ */
 function printQuote () {
   let randomQuote = getRandomQuote ();
   let quote = `<p>"${randomQuote.quote}"</p>
