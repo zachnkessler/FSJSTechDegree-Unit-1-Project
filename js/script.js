@@ -35,10 +35,10 @@ const quotes = [
     quote: "I guess every once in a while both suns shine on a womp rat's tail.",
     source: "Cobb Vanth",
     citation: 'The Mandalorian: Season 2, Episode 2 "Chapter 9: The Marshall"',
-    year: 2020
+    year: 2020,
+    platform: "Disney+"
   }
 ];
-// console.log(quotes); SUCCESSFUL TEST
 
 /**
  * Returns quote from above array using random number as index value.
@@ -49,13 +49,27 @@ function getRandomQuote () {
   let randomNumber = Math.floor(Math.random() * quotes.length);
   return quotes[randomNumber];
 }
-// console.log(getRandomQuote()); SUCCESSFUL TEST
+
+/**
+ * Generates a random color and applies it to the page background upon button click. 
+ * 
+ * Each variable (r, g, and b) is a color value between 0 and 256. 
+ * Code example sourced from: https://www.w3resource.com/javascript-exercises/javascript-math-exercise-40.php
+ */
+function randomColor () {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let rgb = `rgb(${r}, ${g}, ${b})`;
+  document.body.style.background = rgb;
+}
 
 /**
  * Returns HTML string of property values from the quotes array.
  * 
  * Builds HTML string using object property values from the getRandomQuotes function.
  * Places built HTML string within HTML element with ID of #quote-box.
+ * Applies a random background color to the page upon button click from randomColor function.
  */
 function printQuote () {
   let randomQuote = getRandomQuote ();
@@ -67,8 +81,15 @@ function printQuote () {
   if (randomQuote.year) {
     quote += `, ` + `<span>${randomQuote.year}</span>`;
   }
+  if (randomQuote.platform) {
+    quote += `, ` + `<span>${randomQuote.platform}</span>`;
+  }
   quote += `</p>`;
   document.getElementById('quote-box').innerHTML = quote;
+  setTimeout(function(){
+    location = ''
+  }, 5000)
+  randomColor ();
   return quote;
 }
 
