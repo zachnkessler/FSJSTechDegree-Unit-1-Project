@@ -86,6 +86,7 @@ function printQuote () {
   }
   quote += `</p>`;
   document.getElementById('quote-box').innerHTML = quote;
+  randomColor();
   return quote;
 }
 
