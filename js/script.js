@@ -34,7 +34,7 @@ const quotes = [
   {
     quote: "I guess every once in a while both suns shine on a womp rat's tail.",
     source: "Cobb Vanth",
-    citation: 'The Mandalorian: Season 2, Episode 2 "Chapter 9: The Marshall"',
+    citation: 'The Mandalorian: Season 2, Episode 1 "Chapter 9: The Marshall"',
     year: 2020,
     platform: "Disney+"
   }
