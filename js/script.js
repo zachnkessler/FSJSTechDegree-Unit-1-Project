@@ -90,6 +90,13 @@ function printQuote () {
   return quote;
 }
 
+/**
+ * Automatically selects the HTML button with ID of #load-quote every 10 seconds.
+ * 
+ * Code sourced from: https://stackoverflow.com/questions/4515944/how-to-click-a-browser-button-with-javascript-automatically
+ */
+setInterval(function () {document.getElementById("load-quote").click();}, 10000);
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
