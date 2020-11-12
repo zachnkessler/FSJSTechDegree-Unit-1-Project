@@ -95,7 +95,7 @@ function printQuote () {
  * 
  * Code sourced from: https://stackoverflow.com/questions/4515944/how-to-click-a-browser-button-with-javascript-automatically
  */
-setInterval(function () {document.getElementById("load-quote").click();}, 10000);
+setInterval(function () {document.getElementById("load-quote").click();}, 13000);
 
 /***
  * click event listener for the print quote button
