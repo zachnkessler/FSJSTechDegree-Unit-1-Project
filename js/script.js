@@ -73,7 +73,7 @@ function randomColor () {
  */
 function printQuote () {
   let randomQuote = getRandomQuote ();
-  let quote = `<p class="quote">"${randomQuote.quote}"</p>
+  let quote = `<p class="quote">${randomQuote.quote}</p>
                <p class="source">${randomQuote.source}`
   if (randomQuote.citation) {
     quote += `<span class="citation">${randomQuote.citation}</span>`;
