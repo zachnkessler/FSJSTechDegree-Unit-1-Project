@@ -1,4 +1,4 @@
-<strong>Team Treehouse TechDegree Unit One Project:</strong>
+<strong>Full Stack JavaScript TechDegree Unit One Project:</strong>
 
 <strong>Random Quote Generator</strong>
 
