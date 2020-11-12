@@ -73,16 +73,16 @@ function randomColor () {
  */
 function printQuote () {
   let randomQuote = getRandomQuote ();
-  let quote = `<p>"${randomQuote.quote}"</p>
-               <p>-${randomQuote.source}`
+  let quote = `<p class="quote">"${randomQuote.quote}"</p>
+               <p class="source">${randomQuote.source}`
   if (randomQuote.citation) {
-    quote += `, ` + `<span><em>${randomQuote.citation}</em></span>`;
+    quote += `<span class="citation">${randomQuote.citation}</span>`;
   }
   if (randomQuote.year) {
-    quote += `, ` + `<span>${randomQuote.year}</span>`;
+    quote += `<span class="year">${randomQuote.year}</span>`;
   }
   if (randomQuote.platform) {
-    quote += `, ` + `<span>${randomQuote.platform}</span>`;
+    quote += `<span class="platform">${randomQuote.platform}</span>`;
   }
   quote += `</p>`;
   document.getElementById('quote-box').innerHTML = quote;
@@ -95,7 +95,7 @@ function printQuote () {
  * 
  * Code sourced from: https://stackoverflow.com/questions/4515944/how-to-click-a-browser-button-with-javascript-automatically
  */
-setInterval(function () {document.getElementById("load-quote").click();}, 13000);
+setInterval(function () {document.getElementById("load-quote").click();}, 15000);
 
 /***
  * click event listener for the print quote button
